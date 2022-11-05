@@ -1,6 +1,21 @@
 import styled, { css } from "styled-components"
 
-export const InputWrapper = styled.input`
+export const InputWrapper = styled.span``
+
+export const Title = styled.div`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    font-weight: ${theme.font.bold};
+  `}
+`
+export const Error = styled.div`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.red};
+  `}
+`
+
+export const StyledInput = styled.input`
   ${({ theme }) => css`
     color: ${theme.colors.darkGray};
     font-family: ${theme.font.family};
@@ -10,7 +25,7 @@ export const InputWrapper = styled.input`
     border: none;
     border-bottom: 0.1rem solid ${theme.colors.gray};
     outline: none;
-    width: 30rem;
+    width: 25rem;
     &:autofill {
       box-shadow: 0 0 0 ${theme.spacings.small} ${theme.colors.lightGray} inset;
       filter: none;

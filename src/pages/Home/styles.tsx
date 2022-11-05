@@ -1,44 +1,32 @@
-import styled, { css } from "styled-components"
+import styled from "styled-components"
+import media from "styled-media-query"
 
-export const Hr = styled.hr`
-  ${({ theme }) => css`
-    border-top: 0.1rem solid ${theme.colors.darkGray};
-    margin-bottom: 1rem;
-  `}
-`
-export const WeatherWrapper = styled.main`
-  border-radius: 0.3rem;
-  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
-  width: 60rem;
-  padding: 1.5rem;
-`
-export const Wrapper = styled.main`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`
+export const Main = styled.main``
 
-export const LoaderWrapper = styled.main`
-  position: absolute;
-  color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(53, 98, 221, 0.2);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`
-
-export const ErrorMessageWrapper = styled.div`
-  color: ${({ theme }) => theme.colors.red};
-  font-size: ${({ theme }) => theme.font.sizes.medium};
-`
 export const InputArea = styled.div`
-  padding: 2rem;
-  button {
-    margin-left: 1.5rem;
-  }
+  display: flex;
+
+  flex-direction: row;
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    row-gap:1rem;
+   `}
+`
+
+export const ResultsArea = styled.ul`
+  height: 70vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100rem;
+  margin: 3rem auto;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  box-shadow: 0 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
+  ${media.lessThan("medium")`
+      width: 100%;
+      height: 50vh;
+   `}
 `

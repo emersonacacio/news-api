@@ -10,19 +10,4 @@ export default {
   },
 } as ComponentMeta<typeof Header>
 
-export const Default: ComponentStory<typeof Header> = (args) => (
-  <div style={{ maxWidth: "80rem", margin: "auto" }}>
-    <Header {...args} />
-  </div>
-)
-
-Default.args = {
-  weather: {
-    id: 500,
-    main: "Rain",
-    description: "light rain",
-    icon: "10n",
-  },
-  temperature: 55,
-  feelsLike: 10,
-}
+export const Default: ComponentStory<typeof Header> = () => <Header />

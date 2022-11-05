@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const axiosConfig = {
-  baseURL: "https://api.openweathermap.org/data/2.5",
+  baseURL: "https://newsapi.org/v2",
   timeout: 30000,
 }
 

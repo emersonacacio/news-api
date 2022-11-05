@@ -2,7 +2,7 @@
   "git.ignoreLimitWarning": true,
   "workbench.colorTheme": "Winter is Coming (Dark Blue - No Italics)",
   "editor.formatOnSave": true,
-  "editor.fontSize": 18,
+  "editor.fontSize": 14,
   "editor.fontFamily": "JetBrains Mono",
   "auto-rename-tag.activationOnLanguage": [
     "html",
