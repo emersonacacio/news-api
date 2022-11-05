@@ -15,7 +15,7 @@ export const ArticleCard = ({
 }: ArticleCardProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const handleClickSearch: MouseEventHandler<HTMLDivElement> = () => {
+  const handleClickShowDescription: MouseEventHandler<HTMLDivElement> = () => {
     setIsOpen(!isOpen)
   }
   const handleTitleOpenButton = isOpen
@@ -32,7 +32,7 @@ export const ArticleCard = ({
         <S.OpenButton
           title={handleTitleOpenButton}
           isOpen={isOpen}
-          onClick={handleClickSearch}
+          onClick={handleClickShowDescription}
         >
           <TriangleUp />
         </S.OpenButton>

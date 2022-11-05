@@ -1,8 +1,19 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
-export const Main = styled.main``
+export const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
+export const ErrorArea = styled.div`
+  ${({ theme }) => css`
+    margin-top: 1rem;
+    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.red};
+  `}
+`
 export const InputArea = styled.div`
   display: flex;
 
